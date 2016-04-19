@@ -1,7 +1,6 @@
 abstract.tex
 sectionContent_Text_.tex
 sectionSection_title.tex
-Thus_we_observe_that.tex
 sectionCompeting_int.tex
 sectionAuthors_contr.tex
 sectionAcknowledgeme.tex
