@@ -1,0 +1,14 @@
+If we assume that sensitive cells follow a deterministic decay
+$Z_0(t)=xe^{\lambda_0 t}$ and approximate their extinction time as
+$T_x\approx-\frac{1}{\lambda_0}\log x$, then we can heuristically
+estimate the expected value as
+\begin{eqnarray}
+E\bigl[Z_1(vT_x)\bigr] &=& \frac{\mu}{r}\log x
+\int_0^{v\wedge1}x^{1-u}x^{({\lambda_1}/{r})(v-u)}\,du
+\nonumber\\
+&=& \frac{\mu}{r}x^{1-{\lambda_1}/{\lambda_0}v}\log x\int_0^{v\wedge
+1}x^{-u(1+{\lambda_1}/{r})}\,du
+\nonumber\\
+&=& \frac{\mu}{\lambda_1-\lambda_0}x^{1+{\lambda_1}/{r}v} \biggl(1-\exp \biggl[-(v\wedge1) \biggl(1+
+\frac{\lambda_1}{r}\biggr)\log x \biggr] \biggr).
+\end{eqnarray}
