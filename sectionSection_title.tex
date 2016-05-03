@@ -5,7 +5,7 @@ Two datasets were used from a recent paper studying the relationship between tra
 \begin{table}
 \label{tab:datasets}
 
-\begin{tabular}{|l||cccc|}
+\begin{tabular}{l||cccc}
 \toprule
 {} & Alleles & Alleles w/ 10+ measurements & IC50 Measurements & Expanded 9mers \\
 \midrule
@@ -29,8 +29,6 @@ BLIND  &      53 &                          53 &            27,680 &         83,
 \item {\bf svdImpute}~\cite{Troyanskaya_2001}: Imputation using iterative fixed rank SVD decomposition. 
 
 \item {\bf softImpute}~\cite{Mazumder2010SpectralMatrices}: A singular value thresholding method which iteratively estimates a low-rank matrix completion without forcing the pre-specification of a particular solution rank. Instead, the {\it softImpute} method is parameterized by a shrinkage value $\lambda$ that is subtracted from each singular value. 
-
-\item {\bf Similarity Weighted Averaging (SWA)}: Previously unpublished imputation developed for this paper. The pairwise similarity between alleles is computed using the generalized Jaccard index between overlapping observed affinities for both alleles. A missing affinity $X_{ij}$ is then imputed as the similarity weighted sum of observed entries from the $i^{th}$ row of $X$. 
 
 \item {\bf MICE}~\cite{Azur_2011}: Average multiple imputations generated using Gibbs sampling from the joint distribution of columns. 
 \end{itemize}
@@ -57,8 +55,6 @@ knnImpute & $k = 1$ & 0.8088 & 0.6096 & 0.4515\\
   & $k = 5$ & 0.8164 & 0.5884 & 0.4228 \\
 \midrule
 MICE & $n = 25$ & \bf{0.8675} & \bf{0.6292} & 0.4635 \\
-\midrule
-SWA & $p = -4$ & 0.8259 & 0.6162 & 0.4504 \\
 \midrule
 softImpute & $\lambda=1$ & 0.8296 & 0.5126 & \bf{0.4767} \\
 & $\lambda=5$ & 0.8266 & 0.4930 & 0.4689 \\
