@@ -1,6 +1,7 @@
 abstract.tex
 sectionContent_Text_.tex
 section_Evaluation_metrics_Two_datasets__.tex
+section_Matrix_completion_begin_itemize__.tex
 section_Network_architecture_begin_figure__.tex
 section_Matrix_completion_and_imputation__.tex
 section_Pretraining_an_artificial_neural__.tex
