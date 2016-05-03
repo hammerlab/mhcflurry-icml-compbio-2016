@@ -2,7 +2,6 @@
 
 A dataset of peptide-MHC affinities for $n$ peptides and $a$ alleles may be thought of as a $n \times a$ matrix where peptide/allele pairs without measurements are missing values. The task of predicting values at these positions is known as matrix completion, and various heuristic and optimization-based algorithms have been proposed. We first investigated the performance of several matrix completion algorithms as a standalone solution to the peptide-MHC affinity prediction problem. The algorithms considered were:
 
-
 \begin{itemize}
 \item {\bf meanFill}: Replace each missing pMHC binding affinity with the mean affinity for that allele. This is a very simple imputation method which serves as a baseline against which other methods can be compared. 
 
@@ -15,7 +14,7 @@ A dataset of peptide-MHC affinities for $n$ peptides and $a$ alleles may be thou
 \item {\bf MICE}~\cite{Azur_2011}: Average multiple imputations generated using Gibbs sampling from the joint distribution of columns. 
 \end{itemize}
 
-We evaluated 
+We evaluated the performance of these methods using five fold cross validation on BD2009 (~\ref{tab:imputation}). As MICE outperformed the other methods on two of the three predictor metrics, we selected it for the subsequent neural network experiments.
 
 \begin{table}[htbp]
 \centering
@@ -41,7 +40,7 @@ svdImpute & rank = 5 & 0.8271 & 0.6201 & 0.4313 \\
 \bottomrule[1.25pt]
 \end{tabular}
 \begin{center}
-\caption{Comparison of imputation algorithms} \label{tab:imputation}
+\caption{Cross validation performance of several matrix completion algorithms on BD2009} \label{tab:imputation}
 \end{center}
 \end{table}
 
