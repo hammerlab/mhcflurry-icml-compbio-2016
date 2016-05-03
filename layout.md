@@ -1,6 +1,5 @@
 abstract.tex
 sectionContent_Text_.tex
-sectionSection_title.tex
 section_Network_architecture_begin_figure__.tex
 section_Evaluating_the_performance_of__.tex
 section_Matrix_completion_and_imputation__.tex
