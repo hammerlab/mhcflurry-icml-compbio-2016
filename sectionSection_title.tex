@@ -14,12 +14,27 @@ BLIND  &      53 &                          53 &            27,680 &         83,
 \bottomrule
 \end{tabular}
 
+
 \caption{Train (BD2009) and test (BLIND) dataset sizes.}
 \end{table}
 
+\section{Network architecture}
 
 
-\section*{Matrix completion}
+
+\section{Evaluating a predictor}
+
+Throughout this paper we will evaluate a pMHC binding predictor using three different metrics:
+
+\begin{itemize}
+
+\item {\bf F$_1$ score}: Measures trade-off between sensitivity and specificity for predicting ``strong binders'' with affinities $<= 500$nM. 
+\item {\bf AUC}: Area under the ROC curve. Estimates the probability that a ``strong binder'' peptide will be given a stronger predicted affinity than one whose ground truth affinity is $>500$nM. 
+\item {\bf Kendall's $\tau$}: Rank correlation across the full spectrum of binding affinities.
+\end{itemize}
+
+
+\section*{Matrix completion and imputation algorithms}
 
 \begin{itemize}
 \item {\bf meanFill}: Replace each missing pMHC binding affinity with the mean affinity for that allele. This is a very simple imputation method which serves as a baseline against which other methods can be compared. 
@@ -33,13 +48,6 @@ BLIND  &      53 &                          53 &            27,680 &         83,
 \item {\bf MICE}~\cite{Azur_2011}: Average multiple imputations generated using Gibbs sampling from the joint distribution of columns. 
 \end{itemize}
 
-The accuracy of each algorithm was assessed using three different metrics (which we later also use when comparing the performance of predictors):
-
-\begin{itemize}
-\item {\bf Kendall's $\tau$}: Rank correlation across the full spectrum of binding affinities.
-\item {\bf F$_1$ score}: Measures trade-off between sensitivity and specificity for predicting ``strong bindinders'' with affinities $<= 500$nM. 
-\item {\bf AUC}: Area under the ROC curve. Estimates the probability that a ``strong binder'' peptide will be given a stronger predicted affinity than one whose ground truth affinity is $>500$nM. 
-\end{itemize}
 
 
 \begin{table}[htbp]
