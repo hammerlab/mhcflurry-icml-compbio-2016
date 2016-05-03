@@ -1,0 +1,48 @@
+
+\section*{Matrix completion and imputation algorithms}
+
+\begin{itemize}
+\item {\bf meanFill}: Replace each missing pMHC binding affinity with the mean affinity for that allele. This is a very simple imputation method which serves as a baseline against which other methods can be compared. 
+
+\item {\bf knnImpute}~\cite{Troyanskaya_2001}: Each missing entry $X_{ij}$ is imputed using the values in the $k$ closest columns with observation in row $i$.  Similarity between alleles is computed as $e^{-d_{st}^2}$, where $d_{st}$ is the mean squared difference between observed entries of alleles $s$ and $t$. 
+
+\item {\bf svdImpute}~\cite{Troyanskaya_2001}: Imputation using iterative fixed rank SVD decomposition. 
+
+\item {\bf softImpute}~\cite{Mazumder2010SpectralMatrices}: A singular value thresholding method which iteratively estimates a low-rank matrix completion without forcing the pre-specification of a particular solution rank. Instead, the {\it softImpute} method is parameterized by a shrinkage value $\lambda$ that is subtracted from each singular value. 
+
+\item {\bf MICE}~\cite{Azur_2011}: Average multiple imputations generated using Gibbs sampling from the joint distribution of columns. 
+\end{itemize}
+
+
+
+\begin{table}[htbp]
+\centering
+\begin{tabular}{cl||ccc}
+\toprule
+Imputation Method & Parameter & AUC & $F_1$ score & Kendall's $\tau$ \\
+\midrule 
+meanFill &   & 0.6590  & 0.0677 & 0.1836 \\
+\midrule c
+knnImpute & $k = 1$ & 0.8088 & 0.6096 & 0.4515\\
+  & $k = 3$ & 0.8202 & 0.6054 & 0.4358 \\
+  & $k = 5$ & 0.8164 & 0.5884 & 0.4228 \\
+\midrule
+MICE & $n = 25$ & \bf{0.8675} & \bf{0.6292} & 0.4635 \\
+\midrule
+softImpute & $\lambda=1$ & 0.8296 & 0.5126 & \bf{0.4767} \\
+& $\lambda=5$ & 0.8266 & 0.4930 & 0.4689 \\
+& $\lambda=10$ & 0.7903 & 0.3835 & 0.4153 \\
+\midrule
+svdImpute & rank = 5 & 0.8271 & 0.6201 & 0.4313 \\
+& rank = 10 & 0.8283 & 0.6201 & 0.4301 \\
+& rank = 20 & 0.8272 & 0.6270 & 0.4292  \\
+\bottomrule[1.25pt]
+\end{tabular}
+\begin{center}
+\caption{Comparison of imputation algorithms}
+\end{center}
+\end{table}
+
+\section*{Pretraining an artificial neural network with the completed matrix}
+
+TODO
