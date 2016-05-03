@@ -6,3 +6,8 @@ Initial approaches to predicting MHC ligands focused on ``sequence motifs''\cite
 The primary difference between NetMHC and NetMHCpan is that the former is an {\it allele-specific} method which trains a separate predictor for each allele's binding dataset, whereas the latter is a {\it pan-allele} method whose inputs are vector encodings of both the peptide and a subset of MHC molecule's primary sequence. The conventional wisdom is that NetMHC performs better on alleles with many assayed ligands whereas NetMHCpan is superior for less well-characterized alleles~\cite{Gfeller_2016}.
 
 In this paper we explore the space between {\it allele-specific} and {\it pan-allele} prediction by imputing the unobserved values of peptide-MHC affinities for which we have no measurements and using these imputed values for pre-training of allele-specific binding predictors.
+
+To fairly compare against NetMHC, NetMHCpan, and SMM on the same training and test samples we use the BD2009 and BLIND datasets from 
+
+\begin{itemize}
+\item Perform cross-validation 
