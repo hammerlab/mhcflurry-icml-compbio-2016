@@ -1,9 +1,12 @@
 \section{Introduction}
- 
+  
 Most vertebrates are capable of generating diverse populations of adaptive immune cells which detect and eliminate of infected and cancerous cells.
 The detection and elimination of both infection and cancer is the central task of the vertebrate adaptive immune system. 
 In most vertebrates \cite{Anderson_2004}
-Adaptive immunity in most vertebrates can be roughly divided into the realm of antibodies (B-cells) and  
+
+
+
+Two related algorithms - NetMHC and NetMHCpan - have emerged as the preferred methods for computational prediction of T-cell epitopes across several areas of immunology (including virology\cite{Lund_2011} and tumor immunology\cite{Gubin_2015}). These algorithms differ primarily in that NetMHC is an `allele-specific'' method which trains a separate predictor for each allele's binding dataset. In cases where insufficient assay has been gathered for an allele, a NetMHC predictor cannot be trained. NetMHCpan, on the other hand, is a ``pan-allele'' method whose inputs are vector encodings of both the peptide and a subset of MHC molecule's primary sequence. The conventional wisdom is that NetMHC performs better on alleles with thousands of samples, whereas NetMHCpan is superior for alleles with only hundreds of samples or fewer. 
 
 
 \begin{itemize}
