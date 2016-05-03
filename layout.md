@@ -1,5 +1,6 @@
 abstract.tex
 sectionContent_Text_.tex
+figures/mhcflurry diagram - gliffy/mhcflurry diagram - gliffy.png
 sectionSection_title.tex
 sectionAcknowledgeme.tex
 sectionFigures.tex
