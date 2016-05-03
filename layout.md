@@ -1,7 +1,6 @@
 abstract.tex
 sectionContent_Text_.tex
 sectionSection_title.tex
-sectionCompeting_int.tex
 sectionAcknowledgeme.tex
 sectionFigures.tex
 figures/figure_captioncsentenceSamp/default_figure.png
