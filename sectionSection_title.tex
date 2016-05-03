@@ -7,18 +7,17 @@ TODO
 
 
 \subsection*{Datasets}
-Two datasets were used from a recent paper studying the relationship between training data and pMHC predictor accuracy\cite{Kim_2014}. The training dataset (BD2009) contained entries from IEDB\cite{Salimi_2012} up to 2009 and the test dataset (BLIND) contained IEDB entries from between 2010 and 2013 which did not overlap with BD2009.
+Two datasets were used from a recent paper studying the relationship between training data and pMHC predictor accuracy\cite{Kim_2014}. The training dataset (BD2009) contained entries from IEDB\cite{Salimi_2012} up to 2009 and the test dataset (BLIND) contained IEDB entries from between 2010 and 2013 which did not overlap with BD2009 (\ref(tab:datasets)).
 
 \begin{table}
-\label {tab:cohort}
+\label {tab:datasets}
 
-\begin{tabular}{lrrrr}
+\begin{tabular}{lll}
 \toprule
-{} &  alleles &  alleles w/ 50+ measurements &  measurements &  measurements after 9mer adjustment \\
+{} & alleles (w/ 50+ measurements) & measurements (after 9mer adjustment) \\
 \midrule
-   &          &                              &               &                                     \\
-BD2009 &      106 &                           89 &        137,654 &                              470,170 \\
-BLIND  &       53 &                           53 &         27,680 &                               83,752 \\
+BD2009 &                      106 (89) &                      137654 (470170) \\
+BLIND  &                       53 (53) &                        27680 (83752) \\
 \bottomrule
 \end{tabular}
 
