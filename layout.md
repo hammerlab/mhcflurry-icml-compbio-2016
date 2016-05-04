@@ -5,4 +5,3 @@ section_Matrix_completion_as_a__.tex
 section_Network_architecture_begin_figure__.tex
 section_Pretraining_an_artificial_neural__.tex
 figures/figure_captioncsentenceSamp/default_figure.png
-subsectionAdditional.tex
