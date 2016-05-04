@@ -4,7 +4,6 @@ section_Evaluation_metrics_Two_datasets__.tex
 section_Matrix_completion_as_a__.tex
 section_Network_architecture_begin_figure__.tex
 section_Pretraining_an_artificial_neural__.tex
-sectionFigures.tex
 figures/figure_captioncsentenceSamp/default_figure.png
 sectionTables_begint.tex
 sectionAdditional_Fi.tex
