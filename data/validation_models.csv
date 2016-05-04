@@ -1,0 +1,8 @@
+0,"{'activation': 'tanh', 'impute': False, 'embedding_output_dim': 32, 'dropout_probability': 0.0, 'layer_sizes': [64]}"
+1,"{'activation': 'tanh', 'impute': False, 'embedding_output_dim': 8, 'dropout_probability': 0.0, 'layer_sizes': [4]}"
+2,"{'activation': 'tanh', 'impute': False, 'embedding_output_dim': 32, 'dropout_probability': 0.5, 'layer_sizes': [64]}"
+3,"{'activation': 'tanh', 'impute': False, 'embedding_output_dim': 8, 'dropout_probability': 0.5, 'layer_sizes': [4]}"
+4,"{'activation': 'tanh', 'impute': True, 'embedding_output_dim': 32, 'dropout_probability': 0.0, 'layer_sizes': [64]}"
+5,"{'activation': 'tanh', 'impute': True, 'embedding_output_dim': 8, 'dropout_probability': 0.0, 'layer_sizes': [4]}"
+6,"{'activation': 'tanh', 'impute': True, 'embedding_output_dim': 32, 'dropout_probability': 0.5, 'layer_sizes': [64]}"
+7,"{'activation': 'tanh', 'impute': True, 'embedding_output_dim': 8, 'dropout_probability': 0.5, 'layer_sizes': [4]}"
