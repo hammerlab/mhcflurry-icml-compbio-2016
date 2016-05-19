@@ -1,9 +1,5 @@
-activation,dropout_probability,embedding_output_dim,impute,layer_sizes
-tanh,0.0,32,False,[64]
-tanh,0.0,8,False,[4]
-tanh,0.5,32,False,[64]
-tanh,0.5,8,False,[4]
-tanh,0.0,32,True,[64]
-tanh,0.0,8,True,[4]
-tanh,0.5,32,True,[64]
-tanh,0.5,8,True,[4]
+activation,dropout_probability,embedding_output_dim,fraction_negative,impute,layer_sizes
+tanh,0.5,32,0.0,False,[64]
+tanh,0.5,32,0.0,True,[64]
+tanh,0.5,32,0.2,False,[64]
+tanh,0.5,32,0.2,True,[64]
