@@ -1,10 +1,10 @@
 \section{Neural network implementation}
 A {\it mhcflurry} predictor consists of a embedding layer which transforms each amino acid to a learned vector representation, followed by a single hidden layer and finally a scalar output (figure \ref{architecture}). We map IC50 concentrations onto a regression target between 0.0 and 1.0 using the same scheme as NetMHC, $y = 1.0 - max(1.0, log_{50000}(IC50))$.
 
-\begin{figure}[h]
+\begin{figure}[hr]
 \centering
 \includegraphics[scale=0.25]{figures/mhcflurry-gliffy-network.png}
-\caption{Neural network architecture for predicting peptide-MHC affinities from fixed length amino acid sequences}
+\caption{MHCflurry architecture}
 \label{fig:architecture}
 \end{figure}
 
