@@ -22,21 +22,23 @@ We evaluated the performance of these methods using three-fold cross validation 
 \toprule
 Imputation Method & Parameter & AUC & $F_1$ score & Kendall's $\tau$ \\
 \midrule 
-meanFill &   & 0.6590  & 0.0677 & 0.1836 \\
+meanFill &  0.676654 &  0.049500 &  0.176754 \\
 \midrule
-knnImpute & $k = 1$ & 0.8088 & 0.6096 & 0.4515\\
-  & $k = 3$ & 0.8202 & 0.6054 & 0.4358 \\
-  & $k = 5$ & 0.8164 & 0.5884 & 0.4228 \\
+knnImpute & $k = 1$ &  0.809074 &  0.579518 &  0.402011 \\
+  & $k = 3$  &  0.831888 &  0.575937 &  0.420860 \\
+  & $k = 5$ &  0.831026 &  0.561185 &  0.417029 \\
 \midrule
-MICE & $n = 25$ & \bf{0.8675} & \bf{0.6292} & 0.4635 \\
+MICE & $n = 25$  &  0.858611 &  0.575969 &  0.449778 \\
+MICE & $n = 50$  &  0.861272 &  0.565275 &  0.459442 \\
 \midrule
-softImpute & $\lambda=1$ & 0.8296 & 0.5126 & \bf{0.4767} \\
-& $\lambda=5$ & 0.8266 & 0.4930 & 0.4689 \\
-& $\lambda=10$ & 0.7903 & 0.3835 & 0.4153 \\
+softImpute & $\lambda=5$ &  0.789808 &  0.391585 &  0.334080 \\
+& $\lambda=10$ &  0.832483 &  0.535746 &  0.397632 \\
+& $\lambda=20$ &  0.856079 &  0.605987 &  0.437538 \\
+             
 \midrule
-svdImpute & rank = 5 & 0.8271 & 0.6201 & 0.4313 \\
-& rank = 10 & 0.8283 & 0.6201 & 0.4301 \\
-& rank = 20 & 0.8272 & 0.6270 & 0.4292  \\
+svdImpute & rank = 5  &  0.823050 &  0.570396 &  0.391171 \\
+& rank = 10  &  0.836672 &  0.584327 &  0.400482 \\
+& rank = 20  &  0.829862 &  0.570383 &  0.388172 \\
 \bottomrule[1.25pt]
 \end{tabular}
 \begin{center}
