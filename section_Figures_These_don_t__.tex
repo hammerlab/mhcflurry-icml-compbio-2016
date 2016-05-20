@@ -49,3 +49,27 @@ netmhcpan          &  \textbf{0.9209} &  \textbf{0.4861} &  \textbf{0.4393} \\
 \bottomrule
 \end{tabular}
 
+
+
+
+
+
+
+\begin{table}[h]
+\begin{tabular}{llllllll}
+\toprule
+allele &        HLA-A2602 &        HLA-A2603 &        HLA-B0803 &        HLA-B1509 &        HLA-B1503 &           H-2-KD &        HLA-B0802 \\
+\midrule
+train size         &              202 &              205 &              217 &              346 &              429 &              452 &              487 \\
+test size          &              413 &              312 &              234 &              466 &              165 &              229 &              509 \\
+mhcflurry ensemble &           0.9288 &           0.9096 &           0.9521 &           0.8877 &           0.8388 &           0.7905 &           0.9828 \\
+mhcflurry single   &           0.9284 &           0.9062 &           0.9580 &           0.8864 &           0.8354 &           0.7898 &           0.9826 \\
+netmhc             &           0.9316 &           0.8902 &           0.9684 &           0.9012 &           0.8648 &           0.8153 &  \textbf{0.9899} \\
+netmhcpan          &  \textbf{0.9578} &  \textbf{0.9343} &           0.9523 &  \textbf{0.9229} &  \textbf{0.8701} &  \textbf{0.8192} &           0.9896 \\
+smmpmbec_cpp       &           0.9430 &           0.8432 &  \textbf{0.9733} &           0.8946 &           0.8394 &           0.7537 &           0.9872 \\
+\bottomrule
+\end{tabular}
+
+\caption{AUC scores on BLIND dataset for alleles with $\lt 500$ training examples}
+\end{table}
+
