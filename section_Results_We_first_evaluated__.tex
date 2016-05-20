@@ -4,8 +4,7 @@ We first evaluated the effect of imputation, using only the training set, by dow
 % The figure doesn't show up in the preview but does show up if you export to pdf.
 \begin{figure}[here]
 \includegraphics{figures/impute_comparison.pdf}
-\caption{MHCFlurry AUC on down-sampled training data with and without imputation}
-\label{fig:imputecomparison}
+\caption{\label{fig:imputecomparison} MHCFlurry AUC on down-sampled training data with and without imputation}
 \end{figure}
 
 Using the test data, we compared the performance of two MHCFlurry-based models, ``mhcflurry ensemble'' and ``mhcflurry single,'' against netMHC, netMHCpan, and smmpmbec. The ``mhcflurry single'' model is one predictor with the architecture described previously. The ``MHCFlurry ensemble`` model is an ensemble of 10 predictors, each identical to ``mhcflurry single,'' with  different random initial weights.
