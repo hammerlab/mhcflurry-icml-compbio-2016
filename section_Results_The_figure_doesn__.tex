@@ -1,8 +1,19 @@
 \section{Results}
-(The figure doesn't show up in the preview but do show up if you export to pdf. Also these are generated in the 'paper plots' notebook; do not edit by hand.)
+\subsection{Imputation}
+We first evaluated the effect of imputation, using only the training set, by down-sampling the three alleles with the most training data to a range of simulated training set sizes and testing on the remaining data (Figure ~\ref{fig:imputecomparison}). We find that imputation gives a modest improvement up to approximately 100 training samples, but that with more training data there is no benefit to imputation. The results are similar for the two other performance metrics (not shown).
 
+% The figure doesn't show up in the preview but does show up if you export to pdf.
+\begin{figure}[here]
 \includegraphics{figures/impute_comparison.pdf}
+\caption{MHCFlurry AUC on down-sampled training data with and without imputation}
+\label{fig:imputecomparison}
+\end{figure}
 
+\subsection{Blind test data}
+Using the blind test data, we compared the performance of two MHCFlurry-based models, ``mhcflurry ensemble'' and ``mhcflurry single'' with netMHC, netMHCpan, and smmpmbec. The ``mhcflurry single'' model is one predictor with the architecture described previously. The ``MHCFlurry ensemble`` model is an ensemble of 10 predictors, all identical to ``mhcflurry single'' but with  different random initial weights.
+
+
+% These are generated in the 'paper plots' notebook; do not edit by hand.
 
 
 \begin{table}[h]
