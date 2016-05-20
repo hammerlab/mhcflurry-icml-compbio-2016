@@ -1,7 +1,7 @@
 abstract.tex
 sectionContent_Text_.tex
 section_Data_and_evaluation_metrics__.tex
-section_Matrix_completion_as_a__.tex
+section_Comparison_of_imputation_algorithms__.tex
 section_Neural_network_implementation_A__.tex
 section_Results_We_first_evaluated__.tex
 section_Code_and_data_availability__.tex
