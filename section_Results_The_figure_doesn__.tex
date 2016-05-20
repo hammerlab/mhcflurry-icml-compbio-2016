@@ -7,7 +7,7 @@
 \begin{table}[h]
 \begin{tabular}{llll}
 \toprule
-{} &              auc &               f1 &              tau \\
+{} &              AUC &      $F_1$ score & Kendall's $\tau$ \\
 \midrule
 mhcflurry ensemble &           0.9325 &           0.7847 &  \textbf{0.5865} \\
 mhcflurry single   &           0.9313 &           0.7831 &           0.5843 \\
@@ -18,12 +18,13 @@ smmpmbec_cpp       &           0.9213 &           0.7903 &           0.5649 \\
 \end{tabular}
 
 \caption{Performance on BLIND with equal weight given to each measurement}
+\label{tab:measurementweighted}
 \end{table}
 
 \begin{table}[h]
 \begin{tabular}{llll}
 \toprule
-{} &              auc &               f1 &              tau \\
+{} &              AUC &      $F_1$ score & Kendall's $\tau$ \\
 \midrule
 mhcflurry ensemble &           0.9103 &           0.6635 &           0.4890 \\
 mhcflurry single   &           0.9095 &           0.6551 &           0.4874 \\
@@ -34,12 +35,13 @@ smmpmbec_cpp       &           0.8933 &           0.6555 &           0.4661 \\
 \end{tabular}
 
 \caption{Performance on BLIND with equal weight given to each allele (52 alleles)}
+\label{tab:alleleweighted}
 \end{table}
 
 \begin{table}[h]
 \begin{tabular}{llll}
 \toprule
-{} &              auc &               f1 &              tau \\
+{} &              AUC &      $F_1$ score & Kendall's $\tau$ \\
 \midrule
 mhcflurry ensemble &  \textbf{0.9117} &           0.6913 &  \textbf{0.5015} \\
 mhcflurry single   &           0.9109 &           0.6873 &           0.4998 \\
@@ -50,6 +52,7 @@ smmpmbec_cpp       &           0.8931 &           0.6964 &           0.4765 \\
 \end{tabular}
 
 \caption{Performance on BLIND for alleles with at least 500 training observations (44 alleles)}
+\label{tab:alleleweightedbig}
 \end{table}
 
 \begin{table}[h]
@@ -68,4 +71,5 @@ smmpmbec_cpp       &           0.9430 &           0.8432 &  \textbf{0.9733} &   
 \end{tabular}
 
 \caption{AUC scores on BLIND dataset for alleles with $\lt 500$ training examples}
+\label{tab:smallalleles}
 \end{table}
