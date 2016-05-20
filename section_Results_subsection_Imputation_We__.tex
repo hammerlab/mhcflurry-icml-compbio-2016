@@ -1,5 +1,4 @@
 \section{Results}
-\subsection{Imputation}
 We first evaluated the effect of imputation, using only the training set, by down-sampling the three alleles with the most training data to a range of simulated training set sizes and testing on the remaining data (Figure ~\ref{fig:imputecomparison}). We find that imputation gives a modest improvement up to approximately 100 training samples, but that with more training data there is no benefit to imputation. The results are similar for the two other performance metrics (not shown).
 
 % The figure doesn't show up in the preview but does show up if you export to pdf.
@@ -9,7 +8,6 @@ We first evaluated the effect of imputation, using only the training set, by dow
 \label{fig:imputecomparison}
 \end{figure}
 
-\subsection{Blind test data}
 Using the test data, we compared the performance of two MHCFlurry-based models, ``mhcflurry ensemble'' and ``mhcflurry single,'' against netMHC, netMHCpan, and smmpmbec. The ``mhcflurry single'' model is one predictor with the architecture described previously. The ``MHCFlurry ensemble`` model is an ensemble of 10 predictors, each identical to ``mhcflurry single,'' with  different random initial weights.
 
 The MHCFlurry ensemble predictor is competitive with netMHC, but slightly worse than netMHCpan, especially on alleles with little training data (Table ~\ref{tab:smallalleles}). For 6 of the 7 alleles with fewer than 500 training examples, MHCFlurry underperforms (in terms of AUC) both netMHC and netMHCpan. On the 44 alleles with at least 500 observations, however, the MHCFlurry ensemble slightly outperforms the other models. The ensemble predictor reliably outperforms the single model, as expected.
