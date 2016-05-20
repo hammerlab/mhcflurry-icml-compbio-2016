@@ -9,17 +9,18 @@ We evaluated the effect of imputation, using only the training set, by down-samp
 
 We compared the performance of two MHCFlurry-based models, ``mhcflurry ensemble'' and ``mhcflurry single,'' against netMHC, netMHCpan, and smmpmbec on the blind test data. The ``mhcflurry single'' model is one predictor with the architecture described previously. The ``MHCFlurry ensemble'' model is an ensemble of 10 predictors, each identical to the single predictor with different random initial weights.
 
+
 \begin{table}[hr]
 \centering
 \begin{tabular}{llll}
 \toprule
 {} &              AUC &      $F_1$ score & Kendall's $\tau$ \\
 \midrule
-MHCflurry ensemble &           0.9325 &           0.7847 &  \textbf{0.5865} \\
-MHCflurry single   &           0.9313 &           0.7831 &           0.5843 \\
-NetMHC             &           0.9323 &  \textbf{0.8072} &           0.5863 \\
-NetMHCpan          &  \textbf{0.9326} &           0.7996 &           0.5814 \\
-SMM-PMBEC          &           0.9213 &           0.7903 &           0.5649 \\
+mhcflurry ensemble all impute &           0.9326 &           0.7846 &  \textbf{0.5869} \\
+MHCflurry single              &           0.9323 &           0.7811 &           0.5857 \\
+NetMHC                        &           0.9323 &  \textbf{0.8072} &           0.5863 \\
+NetMHCpan                     &  \textbf{0.9326} &           0.7996 &           0.5814 \\
+SMM-PMBEC                     &           0.9213 &           0.7903 &           0.5649 \\
 \bottomrule
 \end{tabular}
 
