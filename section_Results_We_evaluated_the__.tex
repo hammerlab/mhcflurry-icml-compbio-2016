@@ -15,7 +15,7 @@ We compared the performance of two MHCFlurry-based models, ``mhcflurry ensemble'
 \toprule
 {} &               AUC &       $F_1$ score &  Kendall's $\tau$ \\
 \midrule
-mhcflurry ensemble all impute &           0.93260 &           0.78459 &  \textbf{0.58686} \\
+MHCflurry ensemble            &           0.93260 &           0.78459 &  \textbf{0.58686} \\
 MHCflurry single              &           0.93225 &           0.78106 &           0.58572 \\
 NetMHC                        &           0.93234 &  \textbf{0.80722} &           0.58633 \\
 NetMHCpan                     &  \textbf{0.93264} &           0.79957 &           0.58138 \\
@@ -28,12 +28,10 @@ SMM-PMBEC                     &           0.92134 &           0.79026 &         
 \end{table}
 
 
-The MHCFlurry ensemble predictor is competitive with netMHC, but slightly worse than netMHCpan, especially on alleles with little training data. For 6 of the 7 alleles with fewer than 500 training examples, MHCFlurry underperforms (in terms of AUC) both netMHC and netMHCpan. On the 44 alleles with at least 500 observations, however, the MHCFlurry ensemble slightly outperforms the other models. The ensemble predictor reliably outperforms the single model, as expected.
+The MHCFlurry ensemble predictor is competitive with NetMHC, but slightly worse than NetMHCpan. After running these experiments, we realized that the BD2009 / BLIND train and test datasets do not contain any alleles with fewer than 200 training observations. Since imputation only seems to help for alleles with fewer than 100 observations, this benchmark may not significantly benefit from the imputation approach.
 
-The BD2009 / BLIND train and test datasets do not contain any alleles with fewer than 200 training observations. Since imputation only seems to help for alleles with fewer than 100 observations, this benchmark may not benefit from the imputation approach.
-
-\section{Conclusion}
-The MHCflurry ensemble shows state of the art performance on alleles with at least 500 training examples but slightly worse performance than netMHC and netMHCpan on alleles with fewer observations. Imputing training data shows promise in cross-validation as a way to improve performance on alleles with few observations, but only seems to help for very small training sizes ($\leq 100$), not the alleles in the intermediate regime of $200-500$ present in the blind benchmark dataset. Further work is required to assess the accuracy of MHCFlurry and other predictors on alleles with very few training examples and improve MHCFlurry's performance in the intermediate regime.
+\section{Future Work}
+Imputing training data shows promise in cross-validation as a way to improve performance on alleles with few observations, but only seems to help for very small training sizes ($\leq 100$), not the alleles in the intermediate regime of $>200$ present in the BLIND benchmark dataset. Further work is required to assess the accuracy of MHCFlurry and other predictors on alleles with very few training examples.
 
 
 % These are generated in the 'paper plots' notebook; do not edit by hand.
