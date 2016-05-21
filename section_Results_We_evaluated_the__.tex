@@ -2,15 +2,15 @@
 We evaluated the effect of imputation, using only the training set, by down-sampling the three alleles with the most training data to a range of simulated training set sizes and testing on the remaining data (Figure ~\ref{fig:imputecomparison}). We find that imputation gives a modest improvement up to approximately 100 training samples. With more training data there is no benefit to imputation. The results are similar for the two other performance metrics (not shown).
 
 % The figure doesn't show up in the preview but does show up if you export to pdf.
-\begin{figure}[hb]
-\includegraphics{figures/impute_comparison.pdf}
+\begin{figure}[h]
+\includegraphics{figures/HLA-A0201-vs-nsamples-hidden-64-activation-tanh-impute-mice-epochs-250-embedding-32.png}
 \caption{MHCflurry performance on down-sampled training data for HLA-A*02:01 (with and without imputation)}
 \label{fig:imputecomparison} 
 \end{figure}
 
 We compared the performance of two MHCFlurry-based models, ``mhcflurry ensemble'' and ``mhcflurry single,'' against netMHC, netMHCpan, and smmpmbec on the blind test data. The ``mhcflurry single'' model is one predictor with the architecture described previously. The MHCflurry ensemble model contains 10 predictors initialized with different random weights.
 
-\begin{table}[hr]
+\begin{table}[h]
 \centering
 \begin{tabular}{llll}
 \toprule
