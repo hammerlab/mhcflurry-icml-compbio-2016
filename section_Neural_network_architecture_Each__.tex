@@ -8,7 +8,7 @@ Each MHCflurry predictor is a feed-forward neural network containing (1) an embe
 %% \label{fig:architecture}
 %% \end{figure}
 
-Three-fold cross validation on the training set was used to select the hyper-parameters. The best model had 32 output dimensions for the amino acid vector embedding, a hidden layer size of 64, a dropout rate~\cite{Srivastava2014} of 50\%, and 250 training epochs. These hyper-parameters achieved reasonable performance across alleles, but it's likely that performance could be further improved by setting the hyper-parameters separately for each allele.
+Three-fold cross validation on the training set was used to select the hyper-parameters. The best model had 32 output dimensions for the amino acid vector embedding, a hidden layer size of 64, a dropout rate of 50\%, and 250 training epochs. These hyper-parameters achieved reasonable performance across alleles, but it's likely that performance could be further improved by setting the hyper-parameters separately for each allele.
 
 \section{Data encoding}
 
