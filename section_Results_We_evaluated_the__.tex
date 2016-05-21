@@ -7,7 +7,7 @@ We evaluated the effect of imputation, using only the training set, by down-samp
 \caption{\label{fig:imputecomparison} MHCflurry performance on down-sampled training data with and without imputation}
 \end{figure}
 
-We compared the performance of two MHCFlurry-based models, ``mhcflurry ensemble'' and ``mhcflurry single,'' against netMHC, netMHCpan, and smmpmbec on the blind test data. The ``mhcflurry single'' model is one predictor with the architecture described previously. The ``MHCFlurry ensemble'' model is an ensemble of 10 predictors, each identical to the single predictor with different random initial weights.
+We compared the performance of two MHCFlurry-based models, ``mhcflurry ensemble'' and ``mhcflurry single,'' against netMHC, netMHCpan, and smmpmbec on the blind test data. The ``mhcflurry single'' model is one predictor with the architecture described previously. The MHCflurry ensemble model contains 10 predictors initialized with different random weights.
 
 \begin{table}[hr]
 \centering
@@ -15,7 +15,7 @@ We compared the performance of two MHCFlurry-based models, ``mhcflurry ensemble'
 \toprule
 {} &               AUC &       $F_1$ score &  Kendall's $\tau$ \\
 \midrule
-MHCflurry (32x ensemble)        &  \textbf{0.93260} &           0.78459 &   \textbf{0.58686} \\
+MHCflurry (ensemble)        &  \textbf{0.93260} &           0.78459 &   \textbf{0.58686} \\
 MHCflurry (single predictor)    &           0.93225 &           0.78106 &           0.58572 \\
 NetMHC                          &           0.93234 &  \textbf{0.80722} &   \textbf{0.58633} \\
 NetMHCpan                       &  \textbf{0.93264} &           0.79957 &           0.58138 \\
@@ -27,11 +27,7 @@ SMM-PMBEC                       &           0.92134 &           0.79026 &       
 \label{tab:measurementweighted}
 \end{table}
 
-
-The MHCFlurry ensemble predictor is competitive with NetMHC, but slightly worse than NetMHCpan. After running these experiments, we realized that the BD2009 / BLIND train and test datasets do not contain any alleles with fewer than 200 training observations. Since imputation only seems to help for alleles with fewer than 100 observations, this benchmark may not significantly benefit from the imputation approach.
-
-\section{Future Work}
-Imputing training data shows promise in cross-validation as a way to improve performance on alleles with few observations, but only seems to help for very small training sizes ($\leq 100$), not the alleles in the intermediate regime of $>200$ present in the BLIND benchmark dataset. Further work is required to assess the accuracy of MHCFlurry and other predictors on alleles with very few training examples.
-
+\section{Discussion}
+Imputing training data shows promise in cross-validation as a way to improve performance on alleles with few observations, but only seems to help for very small training sizes ($\leq 200$). Unfortunately, only one allele in the BLIND dataset had fewer than 200 samples. Thus, additional work is required to assess the accuracy of MHCflurry and other predictors on alleles with very few training examples. Additionally, we need to further investigate the interaction between imputation parameters, the schedule according to which the weights of imputed samples are decayed, and stopping criteria for training individual allele-specific predictors. Nonetheless, even in its preliminary state, MHCflurry 
 
 % These are generated in the 'paper plots' notebook; do not edit by hand.
