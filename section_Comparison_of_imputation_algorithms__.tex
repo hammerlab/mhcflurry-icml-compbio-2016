@@ -14,7 +14,7 @@ A dataset of peptide-MHC affinities for $n$ peptides and $a$ alleles may be thou
 \item {\bf MICE}~\cite{Azur_2011}: Average multiple imputations generated using Gibbs sampling from the joint distribution of columns. 
 \end{itemize}
 
-We evaluated the performance of these methods using three-fold cross validation on BD2009 (~\ref{tab:imputation}), only considering peptides which occurred in at least three alleles and excluding alleles with less than five measurements. All imputation methods were implemented in the \textit{fancyimpute} Python library~\cite{fancyimpute-0-0-16}. Since MICE outperformed the other methods on two of the three predictor metrics, we selected it for the subsequent neural network experiments.
+We evaluated the performance of these methods using three-fold cross validation on BD2009, only considering peptides which occurred in at least three alleles and excluding alleles with less than five measurements (Table~\ref{tab:imputation}). All imputation methods were implemented in the \textit{fancyimpute} Python library~\cite{fancyimpute-0-0-16}. Since MICE outperformed the other methods on two of the three predictor metrics, we selected it for the subsequent neural network experiments.
 
 \begin{table}[htbp]
 \centering
