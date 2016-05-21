@@ -4,4 +4,4 @@ section_Data_and_evaluation_metrics__.tex
 section_Comparison_of_imputation_algorithms__.tex
 section_Neural_network_architecture_and__.tex
 section_Results_We_evaluated_the__.tex
-section_Code_and_data_availability__.tex
+section_Code_MHCflurry_is_available__.tex
