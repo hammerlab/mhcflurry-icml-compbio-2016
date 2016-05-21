@@ -1,12 +1,12 @@
 \section{Neural network architecture}
 Each MHCflurry is a feed-forward neural network containing (1) an embedding layer which transforms amino acids to learned vector representations, (2) a single hidden layer, (3) a sigmoidal scalar output.
 
-\begin{figure}[h]
-\centering
-\includegraphics[scale=0.5]{figures/mhcflurry-gliffy-network.png}
-\caption{MHCflurry architecture}
-\label{fig:architecture}
-\end{figure}
+%% \begin{figure}[h]
+%% \centering
+%% \includegraphics[scale=0.5]{figures/mhcflurry-gliffy-network.png}
+%% \caption{MHCflurry architecture}
+%% \label{fig:architecture}
+%% \end{figure}
 
 Three-fold cross validation on the training set was used to select the hyper-parameters. The best model had 32 output dimensions for the amino acid vector embedding, a hidden layer size of 64, a dropout rate\cite{Srivastava2014} of 50\%, and 250 training epochs. These hyper-parameters achieved reasonable performance across alleles, but it's likely that performance could be further improved by setting the hyper-parameters separately for each allele.
 
