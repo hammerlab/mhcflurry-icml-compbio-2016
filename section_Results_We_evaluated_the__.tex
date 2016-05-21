@@ -1,9 +1,9 @@
 \section{Results}
-We evaluated the effect of imputation, using only the training set, by down-sampling the three alleles with the most training data to a range of simulated training set sizes and testing on the remaining data (Figure ~\ref{fig:imputecomparison}). We find that imputation gives a modest improvement up to approximately 100 training samples. With more training data there is no benefit to imputation. The results are similar for the two other performance metrics (not shown).
+We evaluated the effect of imputation by drawing subsets of the BD2009 training set for the well-characterized allele HLA-A*02:01. Predictors were trained on a range of simulated training set sizes and tested on the remaining data (Figure ~\ref{fig:imputecomparison}). We find that imputation gives a modest improvement up to approximately 100 training samples. With more training data there is no benefit to imputation. The results are similar for the two other performance metrics (not shown).
 
 % The figure doesn't show up in the preview but does show up if you export to pdf.
 \begin{figure}[h]
-\includegraphics{figures/HLA-A0201-vs-nsamples-hidden-64-activation-tanh-impute-mice-epochs-250-embedding-32.png}
+\includegraphics[scale=0.8]{figures/HLA-A0201-vs-nsamples-hidden-64-activation-tanh-impute-mice-epochs-250-embedding-32.png}
 \caption{MHCflurry performance on down-sampled training data for HLA-A*02:01 (with and without imputation)}
 \label{fig:imputecomparison} 
 \end{figure}
