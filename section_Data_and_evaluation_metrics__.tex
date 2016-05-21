@@ -19,8 +19,8 @@ BLIND  &      53 &                           27,680 &         83,752 \\
 Throughout this paper we will evaluate a pMHC binding predictor using three different metrics:
 
 \begin{itemize}
+\item {\bf AUC}: Area under the ROC curve. Estimates the probability that a ``strong binder'' peptide will be given a stronger predicted affinity than one whose ground truth affinity is $>500$nM.
 \item {\bf F$_1$ score}: Measures trade-off between sensitivity and specificity for predicting ``strong binders'' with affinities $<= 500$nM. 
-\item {\bf AUC}: Area under the ROC curve. Estimates the probability that a ``strong binder'' peptide will be given a stronger predicted affinity than one whose ground truth affinity is $>500$nM. 
 \item {\bf Kendall's $\tau$}: Rank correlation across the full spectrum of binding affinities.
 \end{itemize}
 
