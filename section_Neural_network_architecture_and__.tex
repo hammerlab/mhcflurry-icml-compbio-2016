@@ -1,12 +1,12 @@
 \section{Neural network architecture and training}
-Each MHCflurry is a feed-forward neural network containing (1) an embedding layer which transforms amino acids to learned vector representations, (2) a single hidden layer, (3) a sigmoidal scalar output (figure \ref{architecture}). We map IC50 concentrations onto a regression targets between 0.0 and 1.0 using the same scheme as NetMHC, $y = 1.0 - max(1.0, log_{50000}(IC50))$.
+Each MHCflurry is a feed-forward neural network containing (1) an embedding layer which transforms amino acids to learned vector representations, (2) a single hidden layer, (3) a sigmoidal scalar output. We map IC50 concentrations onto a regression targets between 0.0 and 1.0 using the same scheme as NetMHC, $y = 1.0 - max(1.0, log_{50000}(IC50))$.
 
-\begin{figure}[h]
-\centering
-\includegraphics[scale=0.25]{figures/mhcflurry-gliffy-network.png}
-\caption{MHCflurry architecture}
-\label{fig:architecture}
-\end{figure}
+%% \begin{figure}[h]
+%% \centering
+%% \includegraphics[scale=0.25]{figures/mhcflurry-gliffy-network.png}
+%% \caption{MHCflurry architecture}
+%% \label{fig:architecture}
+%% \end{figure}
 
 Like NetMHC\cite{lundegaard2008accurate}, MHCflurry uses fixed-length 9mer inputs, which requires peptides of other lengths to be transformed into multiple 9mers. Shorter peptides are mapped onto 9mer query peptides by introducing a sentinel ``X'' at every possible position, whereas longer peptides are cut into multiple 9mers by removing consecutive stretches of residues. The predicted affinity for a non-9mer peptide is the geometric mean of the predictions for the generated 9mers. 
 
